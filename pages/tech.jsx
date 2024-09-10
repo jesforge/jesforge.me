@@ -238,6 +238,24 @@ const tech = () => {
       bg: "bg-orange-500",
       text: "text-orange-100",
     },
+    {
+      title: "Docker",
+      id: 25,
+      main: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg",
+      desc: "A set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.",
+      tag: "docker",
+      bg: "bg-orange-500",
+      text: "text-orange-100",
+    },
+    {
+      title: "Proxmox",
+      id: 26,
+      main: "/icons/proxmox.png",
+      desc: "Proxmox Virtual Environment is an open-source server virtualization management platform.",
+      tag: "proxmox",
+      bg: "bg-orange-500",
+      text: "text-orange-100",
+    },
   ];
   const [idNumber, setIdNumber] = useState(0);
   const changeId = (id) => {
