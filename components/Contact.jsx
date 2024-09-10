@@ -11,7 +11,7 @@ const Contact = () => {
         </h2>
         <p className="text-sm md:text-md font-normal lg:text-lg xl:text-lg ">
           If you want to contact me, feel free to reach out to me on Twitter or
-          Discord. I'm always open to new opportunities and collaborations.
+          Discord. I&apos m always open to new opportunities and collaborations.
         </p>
         <div className="grid grid-cols-2 text-[0.7rem] md:text-[0.85rem] lg:text-base gap-2 md:gap-3 lg:gap-4">
           <a
@@ -44,8 +44,7 @@ const Contact = () => {
           width={750}
           height={650}
           sizes="(max-width: 768px) 100vw,
-          (max-width: 1200px) 50vw,
-          33vw"
+          (max-width: 1200px) 50vw,33vw"
           loading="lazy"
           className="rounded-full select-none backdrop-shadow-xl h-24 w-24 md:h-40 md:w-44 lg:w-[15rem] lg:h-[16rem] xl:w-[16rem] xl:h-[18rem]"
         />
