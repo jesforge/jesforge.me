@@ -4,9 +4,6 @@ import { useTheme } from "next-themes";
 
 import { BsArrowUpRight } from "react-icons/bs";
 
-import FloatBlack from "@/public/float-black.svg";
-import FloatWhite from "@/public/float-white.svg";
-
 const Experience = () => {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;

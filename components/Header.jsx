@@ -8,8 +8,8 @@ import Link from "next/link";
 
 import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
 
-import pranjal_header_black from "@/public/images/jesperrichert.png";
-import pranjal_header_white from "@/public/images/jesperrichert.png";
+import pranjal_header_black from "../public/images/jesperrichert.png";
+import pranjal_header_white from "../public/images/jesperrichert.png";
 
 const Header = () => {
   const { systemTheme, theme, setTheme } = useTheme();
