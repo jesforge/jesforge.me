@@ -47,6 +47,9 @@ const Footer = () => {
           {/* Résumé{" "} */}
           <Image src={Gmail} alt="gmail" width="30" />
         </Link>
+      </div>
+
+      <div>
         <Link
           href="/contact-notice"
           target="blank"
@@ -58,6 +61,7 @@ const Footer = () => {
           Contact Notice
         </Link>
       </div>
+
       <a
         href="https://github.com/xyzjesper"
         target="blank"
