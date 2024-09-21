@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import crystopia from "@/public/images/crystopia.png";
-import disbot from "@/public/images/dsbot-full-q.png";
-import nexocrew from "@/public/images/newxocerw-1024.png";
+import crystopia from "../public/images/crystopia.png";
+import disbot from "../public/images/dsbot-full-q.png";
+import nexocrew from "../public/images/newxocerw-1024.png";
 
 
 const ProjectCard = () => {

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 import Head from "next/head";
 
-import ProjectCard from "@/components/ProjectCard";
+import ProjectCard from "../components/ProjectCard";
 
 export default function Wok() {
   useEffect(() => {

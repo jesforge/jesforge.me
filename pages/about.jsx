@@ -4,14 +4,14 @@ import { useTheme } from "next-themes";
 import Head from "next/head";
 import Image from "next/image";
 
-import CategoryCard from "@/components/CategoryCard";
+import CategoryCard from "../components/CategoryCard";
 
-import Flash from "@/public/Flash.svg";
-import Hero from "@/public/images/jesperrichert.png";
-import Rocket from "@/public/Rocket.svg";
-import Sparkles from "@/public/Sparkles.svg";
-import love_black from "@/public/love-black.svg";
-import love_white from "@/public/love-white.svg";
+import Flash from "../public/Flash.svg";
+import Hero from "../public/images/jesperrichert.png";
+import Rocket from "../public/Rocket.svg";
+import Sparkles from "../public/Sparkles.svg";
+import love_black from "../public/love-black.svg";
+import love_white from "../public/love-white.svg";
 
 export default function About() {
   const { systemTheme, theme, setTheme } = useTheme();
