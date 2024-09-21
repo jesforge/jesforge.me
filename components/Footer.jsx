@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import GitHub from "../public/icons/github@2x.png";
 import Instagram from "../public/icons/instagram@2x.png";
@@ -7,27 +6,6 @@ import Image from "next/image";
 import Discord from "@/public/icons/discord-mark-blue.png";
 
 const Footer = () => {
-  const [metaData, setMetaData] = useState({ star: 0, forks: 0 });
-  const [isHovering, setIsHovering] = useState(false);
-  const handleMouseOver = () => {
-    setIsHovering(true);
-  };
-  const handleMouseOut = () => {
-    setIsHovering(false);
-  };
-  useEffect(() => {
-    const getData = async () => {
-      const data = await fetch(
-        "https://api.github.com/repos/pranjalshikhar/portfolio-v3"
-      ).then((res) => res.json());
-      setMetaData({
-        star: data.stargazers_count,
-        forks: data.forks_count,
-      });
-    };
-    getData();
-  }, []);
-
   return (
     <div className=" flex select-none text-sm  py-16 mt-16 flex-col h-max items-center mx-auto justify-center">
       <div className="flex justify-center space-x-4 md:space-x-6 dark:text-white/70 text-gray-500 text-[0.6rem] sm:text-xs md:text-sm lg:text-md mt-2">
@@ -67,6 +45,16 @@ const Footer = () => {
           {" "}
           {/* Résumé{" "} */}
           <Image src={Gmail} alt="gmail" width="30" />
+        </Link>
+        <Link
+          href="/contact-notice"
+          target="blank"
+          rel="noreferrer"
+          className=" dark:hover:text-purple-400 hover:text-purple-600 font-semibold"
+        >
+          {" "}
+          {/* Résumé{" "} */}
+          Contact Notice
         </Link>
       </div>
       <a
