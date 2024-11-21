@@ -16,8 +16,6 @@ const Header = () => {
   const router = useRouter().asPath;
   const [mounted, setMounted] = useState(false);
   let Links = [
-    { name: "timeline", link: "/timeline" },
-    { name: "work", link: "/work" },
     { name: "about", link: "/about" },
     { name: "tech", link: "/tech" },
   ];
@@ -58,6 +56,9 @@ const Header = () => {
       } else {
         setIsScrolled(false);
       }
+
+      setTheme("dark");
+
     };
     setMounted(true);
     window.addEventListener("scroll", handleScroll);
@@ -99,7 +100,7 @@ const Header = () => {
         {currentTheme === "dark" ? (
           <button
             onClick={() => {
-              setTheme("light");
+              setTheme("dark");
             }}
             className="w-max md:order-8 fill-purple-600 "
           >

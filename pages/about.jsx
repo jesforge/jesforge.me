@@ -29,7 +29,7 @@ export default function About() {
     <div className="px-10 sm:px-20 md:px-32 lg:mb-12 lg:px-60 mx-auto max-w-[75rem]">
       <Head>
         <title>Jesper aka xyzjesper</title>
-        <link rel="icon" href="/images/jesperrichert.png" />
+        <link rel="icon" href="https://cdn.discordapp.com/avatars/850470027026759690/007f93943e1beb17ddabd8b96c167faa.webp?size=80" />
       </Head>
       <main className="  max-w-screen ">
         <div className=" mx-auto pt-16 -pb-10 max-w-7xl">
@@ -41,7 +41,7 @@ export default function About() {
             </h1>
             <div className="mx-auto transition-all duration-1000 ease-in-out -mt-8">
               <Image
-                src={Hero}
+                src={"https://cdn.discordapp.com/avatars/850470027026759690/007f93943e1beb17ddabd8b96c167faa.webp?size=80"}
                 height={800}
                 width={800}
                 className="select-none h-40 w-40 rounded-full"
