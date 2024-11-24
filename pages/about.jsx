@@ -12,6 +12,7 @@ import Rocket from "../public/Rocket.svg";
 import Sparkles from "../public/Sparkles.svg";
 import love_black from "../public/love-black.svg";
 import love_white from "../public/love-white.svg";
+import Link from "next/link";
 
 export default function About() {
   const { systemTheme, theme, setTheme } = useTheme();
@@ -29,7 +30,10 @@ export default function About() {
     <div className="px-10 sm:px-20 md:px-32 lg:mb-12 lg:px-60 mx-auto max-w-[75rem]">
       <Head>
         <title>Jesper aka xyzjesper</title>
-        <link rel="icon" href="https://cdn.discordapp.com/avatars/850470027026759690/007f93943e1beb17ddabd8b96c167faa.webp?size=80" />
+        <link
+          rel="icon"
+          href="https://cdn.discordapp.com/avatars/850470027026759690/007f93943e1beb17ddabd8b96c167faa.webp?size=1024"
+        />
       </Head>
       <main className="  max-w-screen ">
         <div className=" mx-auto pt-16 -pb-10 max-w-7xl">
@@ -41,7 +45,9 @@ export default function About() {
             </h1>
             <div className="mx-auto transition-all duration-1000 ease-in-out -mt-8">
               <Image
-                src={"https://cdn.discordapp.com/avatars/850470027026759690/007f93943e1beb17ddabd8b96c167faa.webp?size=80"}
+                src={
+                  "https://cdn.discordapp.com/avatars/850470027026759690/007f93943e1beb17ddabd8b96c167faa.webp?size=1024"
+                }
                 height={800}
                 width={800}
                 className="select-none h-40 w-40 rounded-full"
@@ -119,49 +125,242 @@ export default function About() {
               available for connection on my social media platforms. <br />
               You can contact me on the{" "}
               <span className="text-red-700 font-bold">GMail</span>{" "}
-              <a
+              <Link
                 onClick={() =>
                   navigator.clipboard.writeText("contact@xyzjesper.dev")
                 }
+                target="_blank"
                 className=" underline underline-offset-4 decoration-2 decoration-purple-400 group select-all font-semibold dark:hover:text-purple-400 hover:text-purple-700 cursor-pointer select "
                 href="mailto:contact@xyzjesper.dev"
               >
                 {" "}
                 contact@xyzjesper.dev
-              </a>{" "}
+              </Link>{" "}
               or <span className="text-blue-700 font-bold">Twitter</span>{" "}
-              <a
+              <Link
                 href="http://x.com/xyzjesper"
                 className=" underline underline-offset-4 decoration-2 decoration-purple-400 font-semibold dark:hover:text-purple-400 hover:text-purple-700 cursor-pointer select"
                 rel="noopener noreferrer"
-                target="blank"
+                target="_blank"
               >
                 {" "}
                 xyzjesper{" "}
-              </a>{" "}
+              </Link>{" "}
               or you can DM me on{" "}
               <span className="text-orange-500 font-bold">Instagram</span>{" "}
-              <a
+              <Link
                 href="https://instagram.com/xyzjesper"
-                target="blank"
+                target="_blank"
                 rel="noopener noreferrer"
                 className=" font-semibold underline underline-offset-4 decoration-2 decoration-purple-400 dark:hover:text-purple-400 hover:text-purple-700 cursor-pointer select "
               >
                 {" "}
                 @xyzjesper{" "}
-              </a>{" "}
+              </Link>{" "}
               <span className="text-discord font-bold">Discord</span>{" "}
-              <a
-                href="https://xzyjesper.link/discord"
-                target="blank"
+              <Link
+                href="https://discord.com/users/850470027026759690"
+                target="_blank"
                 rel="noopener noreferrer"
                 className=" font-semibold underline underline-offset-4 decoration-2 decoration-purple-400 dark:hover:text-purple-400 hover:text-purple-700 cursor-pointer select "
               >
                 {" "}
                 @xyzjesper{" "}
-              </a>{" "}
+              </Link>{" "}
             </p>
           </div>
+
+          <div className="p-11">
+            <p className="text-gray-400 select-none font-semibold mb-1 dark:text-white/30 ">
+              TechStack
+            </p>
+
+            <div className="flex flex-wrap justify-center items-center space-x-4">
+              <div className="flex flex-col items-center">
+                <div className="flex items-center justify-center">
+                  <ul className="flex flex-wrap justify-center items-center space-x-4">
+                    <li className="flex items-center justify-center">
+                      <Image
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                        alt="react"
+                        width="40"
+                        height="40"
+                      />
+                    </li>
+                    <li className="flex items-center justify-center">
+                      <Image
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
+                        alt="nextjs"
+                        width="40"
+                        height="40"
+                      />
+                    </li>
+                    <li className="flex items-center justify-center">
+                      <Image
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg"
+                        alt="nodejs"
+                        width="40"
+                        height="40"
+                      />
+                    </li>
+                    <li className="flex items-center justify-center">
+                      <Image
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg"
+                        alt="mongodb"
+                        width="40"
+                        height="40"
+                      />
+                    </li>
+                    <li className="flex items-center justify-center">
+                      <Image
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg"
+                        alt="graphql"
+                        width="40"
+                        height="40"
+                      />
+                    </li>
+                    <li className="flex items-center justify-center">
+                      <Image
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                        alt="javascript"
+                        width="40"
+                        height="40"
+                      />
+                    </li>
+                    <li className="flex items-center justify-center">
+                      <Image
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                        alt="typescript"
+                        width="40"
+                        height="40"
+                      />
+                    </li>
+                    <li className="flex items-center justify-center">
+                      <Image
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg"
+                        alt="css3"
+                        width="40"
+                        height="40"
+                      />
+                    </li>
+                    <li className="flex items-center justify-center">
+                      <Image
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg"
+                        alt="html5"
+                        width="40"
+                        height="40"
+                      />
+                    </li>
+                    <li className="flex items-center justify-center">
+                      <Image
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg"
+                        alt="git"
+                        width="40"
+                        height="40"
+                      />
+                    </li>
+                    <li className="flex items-center justify-center">
+                      <Image
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg"
+                        alt="github"
+                        width="40"
+                        height="40"
+                      />
+                    </li>
+                    <li className="flex items-center justify-center">
+                      <Image
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg"
+                        alt="npm"
+                        width="40"
+                        height="40"
+                      />
+                    </li>
+                    <li className="flex items-center justify-center">
+                      <Image
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg"
+                        alt="yarn"
+                        width="40"
+                        height="40"
+                      />
+                    </li>
+                    <li className="flex items-center justify-center">
+                      <Image
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+                        alt="yarn"
+                        width="40"
+                        height="40"
+                      />
+                    </li>
+                    <li className="flex items-center justify-center">
+                      <Image
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
+                        alt="yarn"
+                        width="40"
+                        height="40"
+                      />
+                    </li>
+                    <li className="flex items-center justify-center">
+                      <Image
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
+                        alt="yarn"
+                        width="40"
+                        height="40"
+                      />
+                    </li>
+                    <li className="flex items-center justify-center">
+                      <Image
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+                        alt="yarn"
+                        width="40"
+                        height="40"
+                      />
+                    </li>
+                    <li className="flex items-center justify-center">
+                      <Image
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg"
+                        alt="yarn"
+                        width="40"
+                        height="40"
+                      />
+                    </li>
+                    <li className="flex items-center justify-center">
+                      <Image
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/discordjs/discordjs-original.svg"
+                        alt="yarn"
+                        width="40"
+                        height="40"
+                      />
+                    </li>
+                    <li className="flex items-center justify-center">
+                      <Image
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/portainer/portainer-original.svg"
+                        alt="yarn"
+                        width="40"
+                        height="40"
+                      />
+                    </li>{" "}
+                    <li className="flex items-center justify-center">
+                      <Image
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+                        alt="yarn"
+                        width="40"
+                        height="40"
+                      />
+                    </li>
+                    <li className="flex items-center justify-center">
+                      <Image
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gradle/gradle-original.svg"
+                        alt="yarn"
+                        width="40"
+                        height="40"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="flex mx-auto justify-center mt-16 select-none">
             <span className="font-black font-app text-2xl md:text-3xl align-text-bottom tracking-wider mx-3 md:mx-6">
               Jesper
