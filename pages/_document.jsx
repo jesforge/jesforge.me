@@ -10,7 +10,7 @@ export default function Document() {
       <Head>
         {/* <title>pranjal ✦ developer, designer</title> */}
         <meta name="title" content="Jesper aka xyzjesper" />
-        <meta name="description" content="Developer // Designer" />
+        <meta name="description" content="Full Stack Developer" />
        
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -51,7 +51,7 @@ export default function Document() {
           rel="stylesheet"
         />
       </Head>
-      <body className="back font-out mx-auto bg-[#fffdfd] dark:bg-[#000000] overflow-x-hidden lg:transform-gpu ">
+      <body className="back font-out mx-auto bg-[#000000] overflow-x-hidden lg:transform-gpu ">
         <Main />
         <NextScript />
       </body>

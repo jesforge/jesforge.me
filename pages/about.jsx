@@ -27,7 +27,7 @@ export default function About() {
   }, []);
 
   return (
-    <div className="px-10 sm:px-20 md:px-32 lg:mb-12 lg:px-60 mx-auto max-w-[75rem]">
+    <div className="px-10 sm:px-20 md:px-32 lg:mb-12 lg:px-60 mx-auto max-w-[75rem] text-white">
       <Head>
         <title>Jesper aka xyzjesper</title>
         <link
@@ -35,7 +35,7 @@ export default function About() {
           href="https://cdn.discordapp.com/avatars/850470027026759690/007f93943e1beb17ddabd8b96c167faa.webp?size=1024"
         />
       </Head>
-      <main className="  max-w-screen ">
+      <main className="  max-w-screen text-white">
         <div className=" mx-auto pt-16 -pb-10 max-w-7xl">
           <div className=" mx-auto flex flex-col ">
             <h1
@@ -55,7 +55,7 @@ export default function About() {
                 priority
               />
             </div>
-            <p className="mt-8 max-w-xl text-center md:w-[70%] mx-auto text-sm md:text-base lg:text-xl mb-2 px-2">
+            <p className="mt-8 max-w-xl text-center md:w-[70%] mx-auto text-sm md:text-base lg:text-xl mb-2 px-2 text-white">
               Little about me. Also, It&apos;s not that hard to find me.
             </p>
             <div className="select-none flex justify-center space-x-4 items-center mt-2 text-gray-400">
@@ -81,8 +81,8 @@ export default function About() {
             </div>
           </div>
           <CategoryCard />
-          <div className=" text-[0.92rem] text-base mx-12 font-light dark:text-white text-gray-900">
-            <p className="mt-6 mb-12 font-normal">
+          <div className=" text-[0.92rem] text-base mx-12 font-light dark:text-white ">
+            <p className="mt-6 mb-12 font-normal text-white">
               Full Stack Developer from Germany{" "}
               <span className="inline-flex items-baseline">
                 <Image
@@ -116,7 +116,7 @@ export default function About() {
               </span>{" "}
             </p>
 
-            <p className="text-gray-400 select-none font-semibold mb-1 dark:text-white/30 ">
+            <p className="text-gray-400 select-none font-semibold mb-">
               Contact
             </p>
 
@@ -172,7 +172,7 @@ export default function About() {
 
           <div className="p-11">
             <p className="text-gray-400 select-none font-semibold mb-1 dark:text-white/30 ">
-              TechStack
+              Tech Stack
             </p>
 
             <div className="flex flex-wrap justify-center items-center space-x-4">
