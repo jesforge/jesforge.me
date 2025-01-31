@@ -1,8 +1,42 @@
+"use client";
 import Image from "next/image";
-import { socialLinks, timeLine } from "./config";
 import Link from "next/link";
+import { useState } from "react";
+import { TbMail, TbMessage, TbSend2, TbUser } from "react-icons/tb";
+import { timeLine } from "./config";
+import { toast } from "react-toastify";
 
 export default function Page() {
+  const [message, setMessage] = useState("");
+
+  async function sendMail(e) {
+    e.preventDefault();
+
+    const response = await fetch("/api/mail", {
+      method: "POST",
+      body: JSON.stringify({
+        name:
+          (
+            (e.target as HTMLFormElement).elements.namedItem(
+              "name"
+            ) as HTMLInputElement
+          )?.value || "",
+        email: (e.target as HTMLFormElement).email.value,
+        message: (e.target as HTMLFormElement).message.value,
+      }),
+    });
+
+    if (response.status == 200) {
+      toast("Email successfully sent!", {
+        type: "success",
+      });
+    } else {
+      toast("Email could not be sent!", {
+        type: "error",
+      });
+    }
+  }
+
   return (
     <section>
       <h1 className="mb-8 text-2xl font-medium tracking-tight">
@@ -493,7 +527,7 @@ export default function Page() {
                   <div className="absolute w-4 h-4 bg-blue-500 rounded-full left-[-10px] top-1/2 transform -translate-y-1/2" />
                   <div className="flex items-center space-x-4">
                     <span className="text-xl font-semibold">
-                      {Date.parse(event.date).toLocaleString("en-US")}
+                      {new Date(event.date).toDateString().slice(4)}
                     </span>
                     <div className="space-y-1">
                       <h3 className="text-lg font-bold">{event.title}</h3>
@@ -506,6 +540,80 @@ export default function Page() {
               ))}
             </div>
           </div>
+        </div>
+        <hr className="my-4" />
+        <div>
+          <h1>Contact</h1>
+
+          <form
+            className="max-w-lg mx-auto rounded-xl shadow-lg  p-6 "
+            onSubmit={sendMail}
+          >
+            <div className="mb-4 border-2 rounded-xl p-4 flex items-center space-x-3">
+              <TbUser className="text-white size-8 font-bold" />
+              <div className="w-full">
+                <label
+                  htmlFor="name"
+                  className="block text-lg font-bold text-white"
+                >
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  className="mt-1 block w-full border-gray-300 shadow-sm p-3 bg-black border-2 rounded-xl"
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="mb-4 border-2 rounded-xl p-4 flex items-center space-x-3 ">
+              <TbMail className="text-white size-8 font-bold" />
+              <div className="w-full">
+                <label
+                  htmlFor="email"
+                  className="block text-lg font-bold text-white"
+                >
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  className="mt-1 block w-full rounded-xl border-gray-300 shadow-sm p-3 bg-black border-2"
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="mb-4 border-2 rounded-xl p-4 ">
+              <label
+                htmlFor="message"
+                className="block text-lg font-bold text-white"
+              >
+                Nachricht
+              </label>
+              <div className="flex items-start space-x-3">
+                <TbMessage className="text-white font-bold size-8 mt-3" />
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={5}
+                  className="mt-1 block w-full rounded-xl border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50 p-3 bg-black border-2"
+                  required
+                ></textarea>
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full py-3 bg-gray-700 text-white rounded-lg font-semibold hover:bg-gray-800 flex items-center justify-center space-x-2 transition-colors duration-700"
+            >
+              <TbSend2 className="size-6" />
+              <span>Contact me</span>
+            </button>
+          </form>
         </div>
       </div>
     </section>

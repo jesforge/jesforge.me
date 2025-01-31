@@ -16,23 +16,38 @@ export const socialLinks = {
 
 export const timeLine = [
   {
-    date: "2023-01-01",
-    title: "Projekt Start",
-    description: "Das Projekt beginnt mit der ersten Planung und Struktur.",
+    date: "2024-08-31",
+    title: "Training as an IT assistant",
+    description: "I started my first training as an IT assistant at 'BS-Husum'.",
   },
   {
-    date: "2023-04-15",
-    title: "Erste Veröffentlichung",
-    description: "Die erste Version der Anwendung wird veröffentlicht.",
+    date: "2024-06-24",
+    title: "MSA - Conclusion",
+    description: "MSA - 'Mittlerer Schulabschluss' successful completed.",
+  },
+  {
+    date: "2023-11-10",
+    title: "Start a Minecraft Server",
+    description: "I stated a unique and inovative Minecraft Server - 'Crystopia'.",
   },
   {
     date: "2023-08-30",
-    title: "Meilenstein erreicht",
-    description: "Ein wichtiger Meilenstein im Projekt wird abgeschlossen.",
+    title: "ICDL Base Force",
+    description: "ECDL Base Force successful completed. (https://www.icdl.de/)",
   },
   {
-    date: "2024-01-01",
-    title: "Projektabschluss",
-    description: "Das Projekt wird offiziell abgeschlossen und gefeiert.",
+    date: "2024-01-12",
+    title: "DisBot Development",
+    description: "I started the Development of my first Discord Bot - 'DisBot'",
+  },
+  {
+    date: "2022-05-15",
+    title: "Start with Development",
+    description: "I started with Development and learned the basics my current skills.",
+  },
+  {
+    date: "2021-11-01",
+    title: "Start my first Project",
+    description: "I started my first project with a friend. - 'Nexocrew' formerly tnsstudio",
   },
 ];
