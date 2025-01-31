@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useState } from "react";
 import { TbMail, TbMessage, TbSend2, TbUser } from "react-icons/tb";
 import { timeLine } from "./config";
-import { toast } from "react-toastify";
 
 export default function Page() {
   const [message, setMessage] = useState("");
@@ -25,16 +24,16 @@ export default function Page() {
         message: (e.target as HTMLFormElement).message.value,
       }),
     });
-
+    setMessage("Sending email...");
     if (response.status == 200) {
-      toast("Email successfully sent!", {
-        type: "success",
-      });
+      setMessage("Email Successfully sent! - Reloading page...");
     } else {
-      toast("Email could not be sent!", {
-        type: "error",
-      });
+      setMessage("Error while sending email! - Reloading page...");
     }
+
+    setTimeout(() => {
+      window.location.reload();
+    }, 1000);
   }
 
   return (
@@ -611,7 +610,7 @@ export default function Page() {
               className="w-full py-3 bg-gray-700 text-white rounded-lg font-semibold hover:bg-gray-800 flex items-center justify-center space-x-2 transition-colors duration-700"
             >
               <TbSend2 className="size-6" />
-              <span>Contact me</span>
+              <span>{message ? message : "Contact me"}</span>
             </button>
           </form>
         </div>
